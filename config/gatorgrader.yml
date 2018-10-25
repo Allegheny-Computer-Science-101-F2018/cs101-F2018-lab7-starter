@@ -1,0 +1,32 @@
+---
+name: cmpsc-101-fall-2018-lab7
+break: true
+indent: 4
+---
+# --> check the source code for various characteristics
+# note that without an "--exact" the check is an "at least"
+src/main:
+    java:
+        labseven/experiment/Experiment.java:
+            --multi 2 --language Java
+            --fragment "TODO" --count 0 --exact
+            --fragment "println(" --count 8 --exact
+src/main:
+    java:
+        labseven/experiment/RunCampaign.java:
+            --multi 4 --language Java
+            --fragment "TODO" --count 0 --exact
+            --fragment "println(" --count 3 --exact
+# --> check the technical writing
+# mdl is a Markdown linting tool
+# proselint checks writing for common mistakes
+writing/reflection.md:
+    mdl
+    proselint
+    --paragraphs 5 --exact
+    --words 100
+# --> check the number of commits beyond a threshold
+--commits 10
+# --> check that the program executes and produces 4 lines of output
+# --> check that the program produces output with certain fragments
+--command "gradle -q --console plain run" --executes
