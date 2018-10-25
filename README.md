@@ -261,7 +261,7 @@ you would like to receive these updates, then you can type this command in the
 main directory for this assignment:
 
 ```
-./gatorgrader.sh --update git@github.com:Allegheny-Computer-Science-101-F2018/cs101-F2018-lab7-starter.git
+git remote add download git@github.com:Allegheny-Computer-Science-101-F2018/cs101-F2018-lab7-starter.git
 ```
 
 You should only need to type this command once; typing the command additional
